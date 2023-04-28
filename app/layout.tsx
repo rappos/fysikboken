@@ -1,3 +1,6 @@
+import { Navbar } from "@/components/Navbar";
+import "./globals.css";
+
 export const metadata = {
     title: "Fysikboken",
     icons: {
@@ -8,7 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="sv">
-            <body>{children}</body>
+            <body>
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }
